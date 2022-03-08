@@ -1,15 +1,26 @@
-name: 'Hello World'
+name: 'Create Deploy Request'
 description: 'Greet someone and record the time'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  org:
+    description: planetscale org name
     required: true
-    default: 'World'
+  database:
+    description: planetscale database to use
+    required: true
+  branch:
+    description: planetscale database branch to run deploy request on
+
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  DEPLOY_REQUEST_NUMBER: # id of output
+    description: 'The planetscale deploy request number'
+  DEPLOY_REQUEST_URL:
+    description: 'The planetscale deploy request URL for link'
+  BRANCH_DIFF:
+    description: 'The SQL file diff text for the deploy request'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.org }}
+    - ${{ inputs.database }}
+    - ${{ inputs.branch }} 
