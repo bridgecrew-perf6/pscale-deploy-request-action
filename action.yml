@@ -1,4 +1,4 @@
-name: 'Create Deploy Request'
+name: 'Planetscale Create Deploy Request'
 description: 'Greet someone and record the time'
 inputs:
   org:
@@ -9,6 +9,7 @@ inputs:
     required: true
   branch:
     description: planetscale database branch to run deploy request on
+    required: true
 
 outputs:
   DEPLOY_REQUEST_NUMBER: # id of output
