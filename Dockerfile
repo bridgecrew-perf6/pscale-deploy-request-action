@@ -1,5 +1,5 @@
 # Container image that runs your code
-FROM golang:alpine 
+FROM golang:bullseye
 
 RUN go install github.com/planetscale/cli/cmd/pscale@v0.89.0 && go clean -cache -testcache -modcache
 
