@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 ORG_NAME=$1
 DB_NAME=$2

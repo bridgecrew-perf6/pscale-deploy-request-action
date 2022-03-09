@@ -9,4 +9,5 @@ COPY ps-authenticate.sh /ps-authenticate.sh
 COPY ps-helper-functions.sh /ps-helper-functions.sh
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
+WORKDIR "/"
 ENTRYPOINT ["/entrypoint.sh"]
