@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 ORG_NAME=$1
 DB_NAME=$2
 BRANCH_NAME=$3
