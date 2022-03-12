@@ -20,6 +20,3 @@ COPY ps-helper-functions.sh /ps-helper-functions.sh
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 WORKDIR /
 ENTRYPOINT ["/entrypoint.sh"]
-
-
-# docker run -e PLANETSCALE_SERVICE_TOKEN=pscale_tkn_rq_XRfVAybbXsUBorWoKGl2fEpsexMOXSOwkAxKfNXQ -e PLANETSCALE_SERVICE_TOKEN_ID=ptrwoh5kj14g -it --entrypoint=bash kolla/pscale-deploy:v1
